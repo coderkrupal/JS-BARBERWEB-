@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.query {
+    width: 100%;
+    height: 30px;
+    background-color: #F5F5DC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Oswald", serif;
+    gap: 10px;
+}
+
+
+.nav_bar{
+    width: 100%;
+    height: 70px;
+    background-color: #1E1E1E;
+    color: white;
+    font-family: "Bebas Neue", serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#header_logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-left: 30px;
+}
+
+ul{
+    display: flex;
+    gap: 40px;
+    margin-right: 40px;
+    font-size: 18px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    transition: all 0.4s linear;
+}
+
+a:hover{
+    border-bottom:2px solid  #00f2ff;
+}
+
+ .nav_bar p{
+    font-size: 20px;
+    font-weight: 800;
+ }
+
+
+ .hero_section{
+    position: relative;
+    width: 100%;
+    height: 800px;
+    background-image: url('/BImages/hero.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+
+
+ .hero_section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75); /* Dark overlay for better text contrast */
+}
+
+
+ .text_box{
+    max-width: 500px;
+    height: 500px;
+ }
+
+ .quote_box {
+    position: absolute;
+    top: 50%;
+    left: 5%; 
+    transform: translateY(-100%);
+    text-align: left; 
+    color: #fff; 
+}
+
+
+.waviy {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+    font-size: 65px;
+    font-weight: 700;
+  }
+  .waviy span {
+    font-family: 'Alfa Slab One', cursive;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+    
+  }
+  @keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  }
+
+
+  .hero-text p {
+    font-size: 1rem;  /* Bigger text for better visibility */
+    font-family: 'Playfair Display', serif; /* Premium & elegant font */
+    font-weight: 700; /* Bold for impact */
+    color: #f8d210; /* Gold color for a luxurious feel */
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8); /* Glow effect */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Starts lower */
+    animation: fadeInSlideUp 1.5s ease-in-out forwards;
+    max-width: 50%;
+    line-height: 1.4; /* Good spacing */
+    word-break: break-word;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Simple Fade-In & Slide-Up Effect */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+ .button_style{
+    margin-left: -400px;
+    margin-top: 20px;
+ }
+
+.container-eg-btn-3 {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto 10px;
+    padding: .5em;
+    line-height: normal;
+  }
+  .container-eg-btn-3 .button {
+    color: #fff;
+    margin: 20px;
+    padding: 12px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    transition: .3s;
+    z-index: 1;
+    background: #3aaeff;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+
+  .container-eg-btn-3 .button-7:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: "";
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: radial-gradient(ellipse at center, #000 0%, rgb(99 103 203 / 0%) 80%);
+    transition-duration: 0.3s;
+    transition-property: transform opacity;
+  }
+  .container-eg-btn-3 .button-7:hover{
+    background: #000;
+    transform: translateY(-5px);    
+  }
+  .container-eg-btn-3 .button-7:hover:before{
+    opacity: 1;
+    transform: translateY(5px);
+  }
